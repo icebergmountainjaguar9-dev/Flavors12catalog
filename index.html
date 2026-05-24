@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Order disposable flavors from flavors12catalog.com with bright emoji illustrations and easy checkout."
+    />
+    <title>Flavors12Catalog</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Disposable Flavors Delivered</p>
+          <h1>Order Your Flavor Favorites</h1>
+          <p class="hero-text">
+            Shop disposable flavor blends with emoji illustrations for a bright,
+            effortless experience. Tap a flavor, choose your mix, and order
+            directly from flavors12catalog.com.
+          </p>
+          <a class="cta-button" href="mailto:order@flavors12catalog.com?subject=Order%20Disposable%20Flavors">
+            Order Now</a>
+        </div>
+        <div class="hero-illustration" aria-hidden="true">
+          <div class="illustration-card">
+            <span class="illustration-emoji">🍓</span>
+            <span>Strawberry</span>
+          </div>
+          <div class="illustration-card">
+            <span class="illustration-emoji">🥭</span>
+            <span>Mango Passion Fruit</span>
+          </div>
+          <div class="illustration-card">
+            <span class="illustration-emoji">🌲</span>
+            <span>Siberian Forest</span>
+          </div>
+          <div class="illustration-card">
+            <span class="illustration-emoji">🥤</span>
+            <span>Coca Cola</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="flavor-grid-section">
+        <h2>Available Disposable Flavors</h2>
+        <div class="flavor-grid">
+          <article class="flavor-card">
+            <div class="flavor-emoji">🍒</div>
+            <h3>Lingonberry</h3>
+          </article>
+          <article class="flavor-card">
+            <div class="flavor-emoji">🔴</div>
+            <h3>Red Currant</h3>
+          </article>
+          <article class="flavor-card">
+            <div class="flavor-emoji">🌲</div>
+            <h3>Siberian Forest</h3>
+          </article>
+          <article class="flavor-card">
+            <div class="flavor-emoji">🥭</div>
+            <h3>Mango Passion Fruit</h3>
+          </article>
+          <article class="flavor-card">
+            <div class="flavor-emoji">🍈</div>
+            <h3>Passion Fruit Kiwi</h3>
+          </article>
+          <article class="flavor-card">
+            <div class="flavor-emoji">🥤</div>
+            <h3>Coca Cola</h3>
+          </article>
+          <article class="flavor-card">
+            <div class="flavor-emoji">🍍</div>
+            <h3>Pineapple Strawberry</h3>
+          </article>
+          <article class="flavor-card">
+            <div class="flavor-emoji">🍓</div>
+            <h3>Strawberry Mango</h3>
+          </article>
+          <article class="flavor-card">
+            <div class="flavor-emoji">🫐</div>
+            <h3>Blackberry Strawberry</h3>
+          </article>
+          <article class="flavor-card">
+            <div class="flavor-emoji">🍓</div>
+            <h3>Strawberry Raspberry</h3>
+          </article>
+          <article class="flavor-card">
+            <div class="flavor-emoji">🍇</div>
+            <h3>Mango Grape</h3>
+          </article>
+        </div>
+      </section>
+
+      <section class="order-section">
+        <div class="order-copy">
+          <h2>Get Started</h2>
+          <p>
+            Ready to order? Click the button to send your request and secure your
+            favorite disposable flavor combo.
+          </p>
+          <a class="secondary-button" href="mailto:order@flavors12catalog.com?subject=Flavor%20Order">
+            Send Order Request</a>
+        </div>
+      </section>
+
+      <section class="crypto-section">
+        <div class="section-copy">
+          <h2>Crypto Checkout</h2>
+          <p>
+            Pay with Bitcoin or Ethereum. The page checks the payment addresses
+            automatically and updates when confirmations arrive.
+          </p>
+        </div>
+
+        <div class="crypto-grid">
+          <article class="crypto-card" id="btc-card">
+            <div class="crypto-header">
+              <span>Bitcoin (BTC)</span>
+              <span class="status-pill" id="btc-status">Checking...</span>
+            </div>
+            <p class="address-label">Send BTC to</p>
+            <code class="address-code" id="btc-address">bc1qvxukeasjgkz7nzvrvk9a9er7a33rstrdv5u4e5</code>
+            <button class="copy-button" data-copy-target="btc-address">Copy BTC Address</button>
+            <p class="crypto-detail" id="btc-detail">Waiting for a transaction...</p>
+          </article>
+
+          <article class="crypto-card" id="eth-card">
+            <div class="crypto-header">
+              <span>Ethereum (ETH)</span>
+              <span class="status-pill" id="eth-status">Checking...</span>
+            </div>
+            <p class="address-label">Send ETH to</p>
+            <code class="address-code" id="eth-address">0x43Cd79268989418085d4F5C17137c29BbBd3d1de</code>
+            <button class="copy-button" data-copy-target="eth-address">Copy ETH Address</button>
+            <p class="crypto-detail" id="eth-detail">Waiting for a transaction...</p>
+          </article>
+        </div>
+
+        <p class="crypto-note">
+          Payments are detected automatically. Deployment is static, so it uses public blockchain APIs to poll both addresses for confirmations.
+        </p>
+      </section>
+
+      <footer class="site-footer">
+        <p>flavors12catalog.com</p>
+      </footer>
+    </div>
+    <script src="checkout.js"></script>
+  </body>
+</html>
