@@ -79,12 +79,25 @@ const getPaymentInfo = async (chain) => {
       return;
     }
 
+    // Normalize key fields. Guard against API responses that include
+    // empty/zero-value entries which should not be treated as payments.
     const confirmations = payment.confirmations || 0;
     const amountUnits = payment.value || payment.amount || 0;
+    const txHash = payment.tx_hash || payment.hash || payment.transaction_hash || '';
+
+    if (!txHash || Number(amountUnits) === 0) {
+      updateStatus(
+        chain,
+        'No payment detected yet',
+        `No transactions were found for ${config.symbol}. Send crypto to the address above and refresh as needed.`,
+        'neutral'
+      );
+      return;
+    }
+
     const amountDisplay = chain === 'btc'
       ? `${amountUnits / 1e8} BTC`
       : `${amountUnits / 1e18} ETH`;
-    const txHash = payment.tx_hash || payment.hash || payment.transaction_hash || '';
     const txLink = buildTxLink(chain, txHash);
     const targetConf = config.requiredConfirmations;
     const explorerLink = txHash
